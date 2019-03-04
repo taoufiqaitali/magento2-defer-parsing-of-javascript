@@ -21,6 +21,6 @@
 
 \Magento\Framework\Component\ComponentRegistrar::register(
     \Magento\Framework\Component\ComponentRegistrar::MODULE,
-    'PHPCuong_DeferParsingOfJavascript',
+    'Cinemanext_DefereJs',
     __DIR__
 );

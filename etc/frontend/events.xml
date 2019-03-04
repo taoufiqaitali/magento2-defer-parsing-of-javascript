@@ -22,6 +22,6 @@
 -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
     <event name="controller_front_send_response_before">
-        <observer name="phpcuong_defer_parsing_of_javascript" instance="PHPCuong\DeferParsingOfJavascript\Observer\DeferJS" />
+        <observer name="cinemanext_defer_parsing_of_javascript" instance="Cinemanext\DefereJs\Observer\DeferJS" />
     </event>
 </config>

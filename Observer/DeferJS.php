@@ -19,7 +19,7 @@
  * @license     https://www.giaphugroup.com/LICENSE.txt
  */
 
-namespace PHPCuong\DeferParsingOfJavascript\Observer;
+namespace Cinemanext\DefereJs\Observer;
 
 class DeferJS implements \Magento\Framework\Event\ObserverInterface
 {
@@ -40,7 +40,7 @@ class DeferJS implements \Magento\Framework\Event\ObserverInterface
                 return false;
             }
 
-            $htmlContent = $this->minifyHtml($htmlContent);
+            //$htmlContent = $this->minifyHtml($htmlContent);
             $htmlContent = $this->moveJavascriptToFooter($htmlContent);
 
             // Set the body with the new HTML content
@@ -71,7 +71,7 @@ class DeferJS implements \Magento\Framework\Event\ObserverInterface
      * @param string $htmlContent
      * @return string
      */
-    private function minifyHtml($htmlContent)
+    /*private function minifyHtml($htmlContent)
     {
         $uncompressed = strlen($htmlContent);
         $pattern = '/<(?<script>script).*?<\/script\s*>|<(?<style>style).*?<\/style\s*>|<!(?<comment>--).*?-->|<(?<tag>[\/\w.:-]*)(?:".*?"|\'.*?\'|[^\'">]+)*>|(?<text>((<[^!\/\w.:-])?[^<]*)+)|/si';
@@ -121,7 +121,7 @@ class DeferJS implements \Magento\Framework\Event\ObserverInterface
         $compressed = strlen($result);
         $savings = ($uncompressed - $compressed) / $uncompressed * 100;
         $savings = round($savings, 2);
-        $result .= '<!--HTML compressed by PHPCuong, you can contact me via Skype: cuongnq87 or the Fanpage: https://www.facebook.com/giaphugroupcom, HTML size saved ' . $savings . '%. From ' . $uncompressed . ' bytes, now ' . $compressed . ' bytes-->';
+        $result .= '<!---->';
         return $result;
-    }
+    }*/
 }
